@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba 1</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            background-color: lightgray;
+            padding: 2rem;
+        }
+        
+        .formcontainer {
+            margin-top: 5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Anketa o omiljenoj hrani</h1>
+        <div class="formcontainer">
+            <form>
+                
+                <input type="radio" name="hrana" id="pizza" value="pizza">
+                <label for="hrana">Pizza</label>
+                <br>
+                
+                <input type="radio" name="hrana" id="hamburger" value="hamburger">
+                <label for="hrana">Hamburger</label>
+                <br>
+                
+                <input type="radio" name="hrana" id="tacos" value="tacos">
+                <label for="hrana">Tacos</label>
+
+                <br>
+                <br>
+
+                <button type="submit" onclick="validirajOdabir()">Potvrdi odabir</button>
+
+            </form>
+        </div>
+    </div>
+    <script>
+        function validirajOdabir() {
+            var odabir = document.querySelector('input[name="hrana"]:checked')
+            if (odabir) {
+                alert("Hvala na sudjelovanju u anketi!");
+            } else {
+                alert("Morate odabrati neku opciju!");
+                }
+            }
+    </script>
+</body>
+</html>
